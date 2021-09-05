@@ -2,7 +2,6 @@
 
 
 module.exports = {
-    testEnvironment: "node",
-    verbose: true,
-    runInBand: true
+    testEnvironment: "jsdom",
+    verbose: true
 }
