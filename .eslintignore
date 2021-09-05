@@ -2,5 +2,4 @@ webpack.config.js
 node_modules/
 dist/
 .github
-app.js
 jest.config.js
