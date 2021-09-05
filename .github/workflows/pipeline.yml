@@ -9,20 +9,13 @@ on:
 
 jobs:
   simple_deployment_pipeline:
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [12.x, 14.x, 16.x]
-
+    runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - name: use node.js ${{ matrix.node-version }}
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
-      - name: npm install
-        run: npm install
+          node-version: '12.x'
+      - name: npm install 
+        run: npm install  
       - name: lint
         run: npm run eslint
-        
